@@ -27,6 +27,7 @@ $ git clone https://github.com/ao-log/excel_to_MarkdownTable
 This app run on docker container. So, please build docker image by the following command.
 
 ```
+$ cd excel_to_MarkdownTable
 $ docker-compose build
 ```
 
@@ -37,5 +38,6 @@ $ docker-compose up -d
 ```
 
 Now, ready to use this app.
-Please access web interface. URL is http://localhost:5000/.
+Please access web interface.  
+URL is http://localhost:5000/.
 
