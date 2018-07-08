@@ -31,7 +31,7 @@ $ cd excel_to_MarkdownTable
 $ docker-compose build
 ```
 
-After build images, please run container.
+After build image, please run container.
 
 ```
 $ docker-compose up -d

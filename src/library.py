@@ -9,7 +9,7 @@ def allowed_file(filename):
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def read_as_dataframe(filename):
-    file_path = "/tmp/%s" % (filename)
+    file_path = '/tmp/%s' % (filename)
     extension = filename.rsplit('.', 1)[1].lower()
 
     if extension in EXCEL_EXTENSIONS:
@@ -20,14 +20,14 @@ def read_as_dataframe(filename):
 def markdown_table_generator(filename):
     def table_row(list):
         str_list = [str(i) for i in list]
-        return "| " + " | ".join(str_list) + " |"
+        return '| ' + ' | '.join(str_list) + ' |'
 
     dataframe = read_as_dataframe(filename)
 
     table = []
     table.append(table_row(dataframe.columns))
     table.append(table_row( \
-        ["--" for i in range(len(dataframe.columns))]))
+        ['--' for i in range(len(dataframe.columns))]))
     for i, row in dataframe.iterrows():
         table.append(table_row(row.values.tolist()))
 

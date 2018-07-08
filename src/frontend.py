@@ -39,7 +39,7 @@ def upload_file():
 @app.route('/uploaded_file/<excel>')
 def uploaded_file(excel):
     messages = markdown_table_generator(excel)
-    os.remove("/tmp/%s" % (excel))
+    os.remove('/tmp/%s' % (excel))
 
     return render_template('markdown.html', messages=messages)
 
