@@ -24,10 +24,10 @@ def upload_file():
         file = request.files['file']
 
         if file.filename == '':
-            return print_error('No selected file')
+            return print_error('No selected file.')
 
         if not allowed_file(file.filename):
-            return print_error('Not allowd filetype. Please choose %s' % (ALLOWED_EXTENSIONS))
+            return print_error('Not allowd filetype.')
 
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
